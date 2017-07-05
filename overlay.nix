@@ -18,7 +18,15 @@ in
       flight-fsdb = self.callPackage ~/dev/src/blockscope/haskell-flight-fsdb {};
       flight-gap = self.callPackage ~/dev/src/blockscope/haskell-flight-gap {};
 
-      flight-task = self.callPackage ~/dev/src/blockscope/haskell-flight-task { fgl = self.haskellPackages.fgl; };
+      flight-task = self.callPackage ~/dev/src/blockscope/haskell-flight-task {
+        fgl = self.haskellPackages.fgl;
+      };
+
+      flare-timing = self.callPackage ~/dev/src/blockscope/flare-timing {
+        flight-fsdb = self.haskellPackages.flight-fsdb;
+        flight-kml = self.haskellPackages.flight-kml;
+        flight-igc = self.haskellPackages.flight-igc;
+      };
 
     };
   };
