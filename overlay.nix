@@ -13,6 +13,7 @@ in
         sha256 = "0biwsaj6s24l8ix95hkw4syl87ywxy363pr413kazzbhi0csf20s";
       }) {};
 
+      siggy-chardust = self.callPackage ~/dev/src/blockscope/haskell-siggy-chardust {};
       flight-kml = self.callPackage ~/dev/src/blockscope/haskell-flight-kml {};
       flight-igc = self.callPackage ~/dev/src/blockscope/haskell-flight-igc {};
       flight-fsdb = self.callPackage ~/dev/src/blockscope/haskell-flight-fsdb {};
