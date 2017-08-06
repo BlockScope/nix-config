@@ -6,6 +6,7 @@ Nixpkgs Contributors Guide.
     ln -s overlay.nix ~/.config/nixpkgs/overlay
     
     nix-build "<nixpkgs>" -A haskellPackages.siggy-chardust
+    nix-build "<nixpkgs>" -A haskellPackages.flight-comp
     nix-build "<nixpkgs>" -A haskellPackages.flight-fsdb
     nix-build "<nixpkgs>" -A haskellPackages.flight-gap
     nix-build "<nixpkgs>" -A haskellPackages.flight-igc
