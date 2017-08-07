@@ -14,16 +14,22 @@ in
       }) {};
 
       siggy-chardust = self.callPackage ~/dev/src/blockscope/haskell-siggy-chardust {};
+      flight-comp = self.callPackage ~/dev/src/blockscope/haskell-flight-comp {};
       flight-kml = self.callPackage ~/dev/src/blockscope/haskell-flight-kml {};
       flight-igc = self.callPackage ~/dev/src/blockscope/haskell-flight-igc {};
-      flight-fsdb = self.callPackage ~/dev/src/blockscope/haskell-flight-fsdb {};
       flight-gap = self.callPackage ~/dev/src/blockscope/haskell-flight-gap {};
+
+      flight-fsdb = self.callPackage ~/dev/src/blockscope/haskell-flight-fsdb {
+        flight-comp = self.haskellPackages.flight-comp;
+      };
 
       flight-task = self.callPackage ~/dev/src/blockscope/haskell-flight-task {
         fgl = self.haskellPackages.fgl;
+        siggy-chardust = self.haskellPackages.siggy-chardust;
       };
 
       flare-timing = self.callPackage ~/dev/src/blockscope/flare-timing {
+        flight-comp = self.haskellPackages.flight-comp;
         flight-fsdb = self.haskellPackages.flight-fsdb;
         flight-kml = self.haskellPackages.flight-kml;
         flight-igc = self.haskellPackages.flight-igc;
