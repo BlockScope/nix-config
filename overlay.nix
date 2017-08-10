@@ -23,6 +23,11 @@ in
         flight-comp = self.haskellPackages.flight-comp;
       };
 
+      flight-track = self.callPackage ~/dev/src/blockscope/haskell-flight-track {
+        flight-comp = self.haskellPackages.flight-comp;
+        flight-kml = self.haskellPackages.flight-kml;
+      };
+
       flight-task = self.callPackage ~/dev/src/blockscope/haskell-flight-task {
         fgl = self.haskellPackages.fgl;
         siggy-chardust = self.haskellPackages.siggy-chardust;
