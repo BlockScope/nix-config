@@ -19,6 +19,10 @@ in
       flight-igc = self.callPackage ~/dev/src/blockscope/haskell-flight-igc {};
       flight-gap = self.callPackage ~/dev/src/blockscope/haskell-flight-gap {};
 
+      flight-units = self.callPackage ~/dev/src/blockscope/haskell-flight-units {
+        siggy-chardust = self.haskellPackages.siggy-chardust;
+      };
+
       flight-fsdb = self.callPackage ~/dev/src/blockscope/haskell-flight-fsdb {
         flight-comp = self.haskellPackages.flight-comp;
       };
@@ -31,6 +35,7 @@ in
       flight-task = self.callPackage ~/dev/src/blockscope/haskell-flight-task {
         fgl = self.haskellPackages.fgl;
         siggy-chardust = self.haskellPackages.siggy-chardust;
+        flight-units = self.haskellPackages.flight-units;
       };
 
       flight-mask = self.callPackage ~/dev/src/blockscope/haskell-flight-mask {
