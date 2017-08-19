@@ -40,6 +40,7 @@ in
 
       flight-mask = self.callPackage ~/dev/src/blockscope/haskell-flight-mask {
         siggy-chardust = self.haskellPackages.siggy-chardust;
+        flight-units = self.haskellPackages.flight-units;
         flight-comp = self.haskellPackages.flight-comp;
         flight-kml = self.haskellPackages.flight-kml;
         flight-gap = self.haskellPackages.flight-gap;
