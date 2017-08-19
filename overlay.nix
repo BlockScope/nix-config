@@ -34,10 +34,14 @@ in
       };
 
       flare-timing = self.callPackage ~/dev/src/blockscope/flare-timing {
+        siggy-chardust = self.haskellPackages.siggy-chardust;
         flight-comp = self.haskellPackages.flight-comp;
         flight-fsdb = self.haskellPackages.flight-fsdb;
         flight-kml = self.haskellPackages.flight-kml;
         flight-igc = self.haskellPackages.flight-igc;
+        flight-gap = self.haskellPackages.flight-gap;
+        flight-task = self.haskellPackages.flight-task;
+        flight-track = self.haskellPackages.flight-track;
       };
 
     };
