@@ -13,4 +13,5 @@ Nixpkgs Contributors Guide.
     nix-build "<nixpkgs>" -A haskellPackages.flight-kml
     nix-build "<nixpkgs>" -A haskellPackages.flight-track
     nix-build "<nixpkgs>" -A haskellPackages.flight-task
+    nix-build "<nixpkgs>" -A haskellPackages.flight-mask
     nix-build "<nixpkgs>" -A haskellPackages.flare-timing

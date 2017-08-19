@@ -33,6 +33,15 @@ in
         siggy-chardust = self.haskellPackages.siggy-chardust;
       };
 
+      flight-mask = self.callPackage ~/dev/src/blockscope/haskell-flight-mask {
+        siggy-chardust = self.haskellPackages.siggy-chardust;
+        flight-comp = self.haskellPackages.flight-comp;
+        flight-kml = self.haskellPackages.flight-kml;
+        flight-gap = self.haskellPackages.flight-gap;
+        flight-task = self.haskellPackages.flight-task;
+        flight-track = self.haskellPackages.flight-track;
+      };
+
       flare-timing = self.callPackage ~/dev/src/blockscope/flare-timing {
         siggy-chardust = self.haskellPackages.siggy-chardust;
         flight-comp = self.haskellPackages.flight-comp;
