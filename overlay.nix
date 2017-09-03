@@ -13,32 +13,32 @@ in
         sha256 = "0biwsaj6s24l8ix95hkw4syl87ywxy363pr413kazzbhi0csf20s";
       }) {};
 
-      siggy-chardust = self.callPackage ~/dev/src/blockscope/haskell-siggy-chardust {};
-      flight-comp = self.callPackage ~/dev/src/blockscope/haskell-flight-comp {};
-      flight-kml = self.callPackage ~/dev/src/blockscope/haskell-flight-kml {};
-      flight-igc = self.callPackage ~/dev/src/blockscope/haskell-flight-igc {};
-      flight-gap = self.callPackage ~/dev/src/blockscope/haskell-flight-gap {};
+      siggy-chardust = self.callPackage ~/dev/src/blockscope/haskell-siggy-chardust/siggy-chardust {};
+      flight-comp = self.callPackage ~/dev/src/blockscope/haskell-flight-comp/flight-comp {};
+      flight-kml = self.callPackage ~/dev/src/blockscope/haskell-flight-kml/flight-kml {};
+      flight-igc = self.callPackage ~/dev/src/blockscope/haskell-flight-igc/flight-igc {};
+      flight-gap = self.callPackage ~/dev/src/blockscope/haskell-flight-gap/flight-gap {};
 
-      flight-units = self.callPackage ~/dev/src/blockscope/haskell-flight-units {
+      flight-units = self.callPackage ~/dev/src/blockscope/haskell-flight-units/flight-units {
         siggy-chardust = self.haskellPackages.siggy-chardust;
       };
 
-      flight-fsdb = self.callPackage ~/dev/src/blockscope/haskell-flight-fsdb {
+      flight-fsdb = self.callPackage ~/dev/src/blockscope/haskell-flight-fsdb/flight-fsdb {
         flight-comp = self.haskellPackages.flight-comp;
       };
 
-      flight-track = self.callPackage ~/dev/src/blockscope/haskell-flight-track {
+      flight-track = self.callPackage ~/dev/src/blockscope/haskell-flight-track/flight-track {
         flight-comp = self.haskellPackages.flight-comp;
         flight-kml = self.haskellPackages.flight-kml;
       };
 
-      flight-task = self.callPackage ~/dev/src/blockscope/haskell-flight-task {
+      flight-task = self.callPackage ~/dev/src/blockscope/haskell-flight-task/flight-task {
         fgl = self.haskellPackages.fgl;
         siggy-chardust = self.haskellPackages.siggy-chardust;
         flight-units = self.haskellPackages.flight-units;
       };
 
-      flight-mask = self.callPackage ~/dev/src/blockscope/haskell-flight-mask {
+      flight-mask = self.callPackage ~/dev/src/blockscope/haskell-flight-mask/flight-mask {
         siggy-chardust = self.haskellPackages.siggy-chardust;
         flight-units = self.haskellPackages.flight-units;
         flight-comp = self.haskellPackages.flight-comp;
@@ -48,7 +48,7 @@ in
         flight-track = self.haskellPackages.flight-track;
       };
 
-      flare-timing = self.callPackage ~/dev/src/blockscope/flare-timing {
+      flare-timing = self.callPackage ~/dev/src/blockscope/flare-timing/flare-timing {
         siggy-chardust = self.haskellPackages.siggy-chardust;
         flight-units = self.haskellPackages.flight-units;
         flight-comp = self.haskellPackages.flight-comp;
