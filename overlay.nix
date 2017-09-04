@@ -14,31 +14,31 @@ in
       }) {};
 
       siggy-chardust = self.callPackage ~/dev/src/blockscope/flare-timing/siggy-chardust {};
-      flight-comp = self.callPackage ~/dev/src/blockscope/flare-timing/flight-comp {};
-      flight-kml = self.callPackage ~/dev/src/blockscope/flare-timing/flight-kml {};
-      flight-igc = self.callPackage ~/dev/src/blockscope/flare-timing/flight-igc {};
-      flight-gap = self.callPackage ~/dev/src/blockscope/flare-timing/flight-gap {};
+      flight-comp = self.callPackage ~/dev/src/blockscope/flare-timing/comp {};
+      flight-kml = self.callPackage ~/dev/src/blockscope/flare-timing/kml {};
+      flight-igc = self.callPackage ~/dev/src/blockscope/flare-timing/igc {};
+      flight-gap = self.callPackage ~/dev/src/blockscope/flare-timing/gap {};
 
-      flight-units = self.callPackage ~/dev/src/blockscope/flare-timing/flight-units {
+      flight-units = self.callPackage ~/dev/src/blockscope/flare-timing/units {
         siggy-chardust = self.haskellPackages.siggy-chardust;
       };
 
-      flight-fsdb = self.callPackage ~/dev/src/blockscope/flare-timing/flight-fsdb {
+      flight-fsdb = self.callPackage ~/dev/src/blockscope/flare-timing/fsdb {
         flight-comp = self.haskellPackages.flight-comp;
       };
 
-      flight-track = self.callPackage ~/dev/src/blockscope/flare-timing/flight-track {
+      flight-track = self.callPackage ~/dev/src/blockscope/flare-timing/track {
         flight-comp = self.haskellPackages.flight-comp;
         flight-kml = self.haskellPackages.flight-kml;
       };
 
-      flight-task = self.callPackage ~/dev/src/blockscope/flare-timing/flight-task {
+      flight-task = self.callPackage ~/dev/src/blockscope/flare-timing/task {
         fgl = self.haskellPackages.fgl;
         siggy-chardust = self.haskellPackages.siggy-chardust;
         flight-units = self.haskellPackages.flight-units;
       };
 
-      flight-mask = self.callPackage ~/dev/src/blockscope/flare-timing/flight-mask {
+      flight-mask = self.callPackage ~/dev/src/blockscope/flare-timing/mask {
         siggy-chardust = self.haskellPackages.siggy-chardust;
         flight-units = self.haskellPackages.flight-units;
         flight-comp = self.haskellPackages.flight-comp;
