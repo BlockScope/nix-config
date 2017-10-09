@@ -7,6 +7,8 @@ Nixpkgs Contributors Guide.
     
     nix-build "<nixpkgs>" -A haskellPackages.siggy-chardust
     nix-build "<nixpkgs>" -A haskellPackages.flight-units
+    nix-build "<nixpkgs>" -A haskellPackages.flight-latlng
+    nix-build "<nixpkgs>" -A haskellPackages.flight-zone
     nix-build "<nixpkgs>" -A haskellPackages.flight-comp
     nix-build "<nixpkgs>" -A haskellPackages.flight-fsdb
     nix-build "<nixpkgs>" -A haskellPackages.flight-gap
