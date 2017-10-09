@@ -15,7 +15,6 @@ in
       }) {};
 
       siggy-chardust = self.callPackage (ft "siggy-chardust") {};
-      flight-comp = self.callPackage (ft "comp") {};
       flight-kml = self.callPackage (ft "kml") {};
       flight-igc = self.callPackage (ft "igc") {};
       flight-gap = self.callPackage (ft "gap") {};
@@ -24,7 +23,36 @@ in
         siggy-chardust = x.siggy-chardust;
       };
 
+      flight-latlng = self.callPackage (ft "latlng") {
+        siggy-chardust = x.siggy-chardust;
+        flight-units = x.flight-units;
+      };
+
+      flight-zone = self.callPackage (ft "zone") {
+        siggy-chardust = x.siggy-chardust;
+        flight-units = x.flight-units;
+        flight-latlng = x.flight-latlng;
+      };
+
+      flight-task = self.callPackage (ft "task") {
+        siggy-chardust = x.siggy-chardust;
+        flight-units = x.flight-units;
+        flight-latlng = x.flight-latlng;
+        flight-zone = x.flight-zone;
+        fgl = x.fgl;
+      };
+
+      flight-comp = self.callPackage (ft "comp") {
+        siggy-chardust = x.siggy-chardust;
+        flight-units = x.flight-units;
+        flight-latlng = x.flight-latlng;
+        flight-zone = x.flight-zone;
+      };
+
       flight-fsdb = self.callPackage (ft "fsdb") {
+        siggy-chardust = x.siggy-chardust;
+        flight-units = x.flight-units;
+        flight-latlng = x.flight-latlng;
         flight-comp = x.flight-comp;
       };
 
@@ -33,31 +61,30 @@ in
         flight-kml = x.flight-kml;
       };
 
-      flight-task = self.callPackage (ft "task") {
-        fgl = x.fgl;
-        siggy-chardust = x.siggy-chardust;
-        flight-units = x.flight-units;
-      };
-
       flight-mask = self.callPackage (ft "mask") {
         siggy-chardust = x.siggy-chardust;
         flight-units = x.flight-units;
+        flight-latlng = x.flight-latlng;
+        flight-zone = x.flight-zone;
+        flight-task = x.flight-task;
         flight-comp = x.flight-comp;
         flight-kml = x.flight-kml;
         flight-gap = x.flight-gap;
-        flight-task = x.flight-task;
         flight-track = x.flight-track;
+        fgl = x.fgl;
       };
 
       flare-timing = self.callPackage (ft "flare-timing") {
         siggy-chardust = x.siggy-chardust;
         flight-units = x.flight-units;
+        flight-latlng = x.flight-latlng;
+        flight-zone = x.flight-zone;
+        flight-task = x.flight-task;
         flight-comp = x.flight-comp;
         flight-fsdb = x.flight-fsdb;
         flight-kml = x.flight-kml;
         flight-igc = x.flight-igc;
         flight-gap = x.flight-gap;
-        flight-task = x.flight-task;
         flight-mask = x.flight-mask;
         flight-track = x.flight-track;
       };
