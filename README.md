@@ -3,7 +3,7 @@
 With help from the [haskell](http://nixos.org/nixpkgs/manual/#users-guide-to-the-haskell-infrastructure) section of the
 Nixpkgs Contributors Guide.
 
-    ln -s overlay.nix ~/.config/nixpkgs/overlay
+    ln -s ~/dev/blockscope/nix-config/overlays.nix ~/.config/nixpkgs/overlays/flare-timing-overlay.nix
     
     nix-build "<nixpkgs>" -A haskellPackages.siggy-chardust
     nix-build "<nixpkgs>" -A haskellPackages.flight-units
